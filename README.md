@@ -1,11 +1,11 @@
 # web-scraping-challenge
 # included in the Mission to Mars folder:
-  # - Screen shots of the flask appication and images of the website created
-  #Juypter files
+  1.Screen shots of the flask appication and images of the website created
+  2.Juypter files
     # - Web Scraping.ipynb file
-    # - Monog_database_upater.ipynb file
-  # html.index
-  #.py files
+    # - Mongo_database_upater.ipynb file
+  3.html.index
+  4. .py files
     # - app.py
     # - scrape_mars. py
   
