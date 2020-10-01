@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<head>
+  <!-- Provide Style Sheets to Make Our Page Look Good-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+  <!-- Add Custom layout for table data-->
+    <style>
+      td { 
+    padding: 5px; 
+    text-align:center;       
+    } 
+    th { 
+    padding: 5px; 
+    text-align:center;       
+    } 
+    </style>
+
+  <!-- Add A Title To Our Page-->
+  <title>Mars</title>
+
+</head>
+<body>
+  
+  <!-- Page Explaination Displayed as Jumbotron to give the page some color contrast -->
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="display-4">Mission to Mars</h1>
+      <hr class="my-4">
+      <p>
+        <div class="col-md-12 text-center">
+        <a class="btn btn-primary btn-lg" href="/scrape" role="button">Get Data!</a>
+      </div>
+      <hr class="my-4">
+      </p>
+      <footer>
+        <h1 class="display-4 text-center">News</h1>
+        <hr class="my-4">
+        <h3 class="display-5 text-center">{{mars_dbdata.News_Title}}</h3>
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <p>{{mars_dbdata.News_Text}}</p>
+            </div>
+        </div>
+        <hr class="my-4">
+        <h1 class="display-4 text-center">Featured Image</h1>
+        <hr class="my-4">
+        <img src="{{mars_dbdata.Featured_Image}}" class="img-fluid" alt="Responsive image">
+        <hr class="my-4">
+      <h1 class="display-4 text-center">Mars Facts</h1>
+          <hr class="my-4">
+          <div class="row">
+            <div class="col-md-12">
+              {{mars_dbdata.Mars_Facts | safe}}
+            </div>
+        </div>
+        <hr class="my-4">
+        <h1 class="display-4 text-center">Mars Weather</h1>
+          <hr class="my-4">
+          <div class="row">
+            <div class="col-md-12 text-center">
+                <p>{{mars_dbdata.Latest_Weather}}</p>
+            </div>
+    </footer>
+    </div>
+  </div>
+
+  <!-- Thumbnails portion a place to view each Graph and go to the dedicated page for each Graph -->
+  <div class="container">
+    <h3 class="text-center">Mars Hemisphere</h3>
+      <div class="row">
+          <div class="col-md-6">
+            <div class="thumbnail">
+                <img src="{{mars_dbdata.Mars_Hemisphere_Pics[0].ImageUrl}}" class="img-thumbnail">
+              </a>
+            </div>
+            <div class="caption text-center">
+                <h4>{{mars_dbdata.Mars_Hemisphere_Pics[0].Title}}</h4>
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="thumbnail">
+                  <img src="{{mars_dbdata.Mars_Hemisphere_Pics[1].ImageUrl}}" class="img-thumbnail">
+                </a>
+  
+              </div>
+            <div class="caption text-center">
+                <h4>{{mars_dbdata.Mars_Hemisphere_Pics[1].Title}}</h4>
+            </div>
+          </div>
+          <div class="col-md-6">
+              <div class="thumbnail">
+                  <img src="{{mars_dbdata.Mars_Hemisphere_Pics[2].ImageUrl}}" class="img-thumbnail">
+                </a>
+              </div>
+              <div class="caption text-center">
+                  <h4>{{mars_dbdata.Mars_Hemisphere_Pics[2].Title}}</h4>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="thumbnail">
+                <img src="{{mars_dbdata.Mars_Hemisphere_Pics[3].ImageUrl}}" class="img-thumbnail">
+              </a>
+            </div>
+            <div class="caption text-center">
+                <h4>{{mars_dbdata.Mars_Hemisphere_Pics[3].Title}}</h4>
+          </div>
+        </div>
+      </div>
+
+<!-- Place to Run Jquery Scripts Needed for Page Interaction -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></scripts>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
